@@ -1,1 +1,1 @@
-[Link](second.md) # Hello World!
+#[Hello World!](second.md)
