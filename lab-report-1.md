@@ -49,6 +49,7 @@
      *  The current directory remains unchanged.
      *  This output is consitent with our expectation as the `cd` command works on directories and not on files and therefore it displays the error message and the current directory remains unchanged.
      *  This output is not an error but an expected behaviour.
+
 <br/><br/>
 
 ## `ls` command
