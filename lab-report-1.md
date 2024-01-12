@@ -47,5 +47,68 @@
      *  The working directory here is the user's home directory represented by `~` symbol.
      *  When we used the `cd` command with `lecture1/messages/en-us.txt` as the argument, which is a file, a message is displayed as an output- `bash: cd: lecture1/messages/en-us.txt: Not a directory`- telling as the argument we gave with the command is not a directory.
      *  The current directory remains unchanged.
-     *  This output is consitent with our expectation as the `cd` command works on directories and not on files and therefore it displays the error message and and the current directory remains unchanged.
+     *  This output is consitent with our expectation as the `cd` command works on directories and not on files and therefore it displays the error message and the current directory remains unchanged.
      *  This output is not an error but an expected behaviour.
+<br/><br/>
+
+## `ls` command
+1.  **Using the command with no arguments**
+   
+    ```bash
+       [user@sahara ~/lecture1]$ ls
+       Hello.class  Hello.java  messages  README
+       [user@sahara ~/lecture1]$ 
+    ```
+     *  The working directory here is `~/lecture1`.
+
+2. **Using the command with a path to a directory as an argument**
+   
+    ```bash
+      [user@sahara ~]$ ls lecture1/messages
+      en-us.txt  es-mx.txt  zh-cn.txt
+      [user@sahara ~]$ 
+    ```
+     *  The working directory here is `~/lecture1/messages`.
+
+3. **Using the command with a path to a file as an argument**
+
+    ```bash
+       [user@sahara ~/lecture1/messages]$ ls es-mx.txt
+       es-mx.txt
+       [user@sahara ~/lecture1/messages]$ 
+    ```
+     *  The working directory here is `~/lecture1/messages`.
+
+<br/><br/>
+## `cat` command
+1.  **Using the command with no arguments**
+   
+    ```bash
+       [user@sahara ~/lecture1]$ cat
+       
+    ```
+     *  The working directory here is `~/lecture1`.
+
+2. **Using the command with a path to a directory as an argument**
+   
+    ```bash
+       [user@sahara ~/lecture1]$ cat messages
+       cat: messages: Is a directory
+       [user@sahara ~/lecture1]$ 
+    ```
+     *  The working directory here is `~/lecture1`.
+
+3. **Using the command with a path to a file as an argument**
+
+    ```bash
+       [user@sahara ~/lecture1]$ cat messages/en-us.txt
+       Hello World!
+       [user@sahara ~/lecture1]$ 
+    ```
+     *  The working directory here is `~/lecture1`.
+
+<br/><br/>
+
+
+
+
