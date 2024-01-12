@@ -1,5 +1,18 @@
 # Lab Report 1 - Remote Access and FileSystem (Week 1)
 <br/><br/> 
+
+  Workspace:
+  
+        |lecture1
+                |messages
+                      |en-us.txt
+                      |es-mx.txt
+                      |zh-cn.txt
+                |Hello.java
+                |Hello.class
+                |README
+     
+ <br/><br/>      
 ## `cd` command
 1.  **Using the command with no arguments**
    
@@ -11,6 +24,8 @@
        [user@sahara ~/lecture1/messages]$ cd
        [user@sahara ~]$ 
     ```
+    
+    
     
 2. **Using the command with a path to a directory as an argument**
 
