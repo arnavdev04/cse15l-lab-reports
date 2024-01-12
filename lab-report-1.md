@@ -5,7 +5,7 @@
    
     ```bash
        [user@sahara ~]$ cd
-       [user@sahara ~]$
+       [user@sahara ~]$ 
     ```
     ```bash
        [user@sahara ~/lecture1/messages]$ cd
@@ -35,8 +35,4 @@
      bash: cd: Hello.java: Not a directory
      [user@sahara ~/lecture1]$
     ```
-
     
-   
-
-   
