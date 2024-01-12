@@ -17,16 +17,6 @@
 1.  **Using the command with no arguments**
    
     ```bash
-       [user@sahara ~]$ cd
-       [user@sahara ~]$ 
-    ```
-     *  The working directory here is the user's home directory represented by `~` symbol.
-     *  When `cd` command is used from home directory, nothing happens.
-     *  This output is consitent with our expectation as the `cd` command with no arguments is used to change the current working directory to the home directory but since we were in the home directory to start with, we remain in the home directory.
-     *  This output is not an error but an expected behaviour.
-
-
-    ```bash
        [user@sahara ~/lecture1/messages]$ cd
        [user@sahara ~]$ 
     ```
@@ -36,18 +26,8 @@
      *  This output is not an error but an expected behaviour.
     
     
-    
 2. **Using the command with a path to a directory as an argument**
 
-    ```bash
-      [user@sahara ~]$ cd lecture1
-      [user@sahara ~/lecture1]$ 
-    ```
-    *  The working directory here is the user's home directory represented by `~` symbol.
-    *  When we used the `cd` command with `lecture1` as the argument, which is the name of a directory, the current directory changes to `~/lecture1`.
-    *  This output is consitent with our expectation as the `cd` command when passed with the name of a directory that the current directory contains changes the current directory with the directory that is given as an aregument.
-    *  This output is not an error but an expected behaviour.
-    
     ```bash
        [user@sahara ~/lecture1]$ cd messages
        [user@sahara ~/lecture1/messages]$ 
@@ -69,11 +49,3 @@
      *  The current directory remains unchanged.
      *  This output is consitent with our expectation as the `cd` command works on directories and not on files and therefore it displays the error message and and the current directory remains unchanged.
      *  This output is not an error but an expected behaviour.
-
-    ```bash
-     [user@sahara ~/lecture1]$ cd Hello.java
-     bash: cd: Hello.java: Not a directory
-     [user@sahara ~/lecture1]$ 
-    ```
-     *  The working directory here is `~/lecture1`.
-     *  
