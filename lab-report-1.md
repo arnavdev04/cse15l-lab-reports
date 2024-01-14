@@ -1,7 +1,7 @@
 # Lab Report 1 - Remote Access and FileSystem (Week 1)
 <br/><br/> 
 
- #### The file system structure:
+**The file system structure:**
   
         |lecture1
                 |messages
