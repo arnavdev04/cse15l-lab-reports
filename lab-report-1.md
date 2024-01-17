@@ -87,7 +87,7 @@
     ```
      *  The working directory before the command is `~/lecture1/messages`.
      *  When we used `ls` command with `es-mx.txt`, which is a file present inside the `~/lecture1/messages` directory, it displayed the file's name, i.e.,`es-mx.txt`.
-     *  In this case, since we gave the command a name of a file as an argument, it resolves the path to find the absolute address of the file which in this case is `~/lecture1/messages/es-mx.txt` and lists the names of its contents. Since a file can only contain itself, i.e, a singular name, the `ls` command only displayed the name of the file it was given the argument as.
+     *  In this case, since we gave the command a name of a file as an argument, it resolves the path to find the absolute address of the file which in this case is `~/lecture1/messages/es-mx.txt` and lists the names of its contents. Since a file can only contain itself, i.e, a singular name, the `ls` command only display the name of the file it was given the argument as.
      *  This output is not an error.
 
 <br/><br/>
@@ -101,7 +101,7 @@
      *  The working directory before the command is `~/lecture1`.
      *  When we used the `cat` command with no arguments, the cursor shifts to a new empty line.
      *  The command is waiting for the user to input text. Whatever is typed will be displayed on the terminal until Ctrl + D is pressed. 
-     *  This output is not an error, it is the expected behavior of cat waiting for user input.
+     *  This output is not an error, it is the expected behavior of `cat` waiting for user input.
 
 2. **Using the command with a path to a directory as an argument**
    
