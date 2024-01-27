@@ -1,7 +1,7 @@
 # Lab Report 2 - Servers and SSH Keys (Week 3)
 <br/><br/> 
 ## Part 1
-```javascript
+```java
 import java.io.IOException;
 import java.net.URI;
 
