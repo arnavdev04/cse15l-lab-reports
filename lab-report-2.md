@@ -9,7 +9,7 @@ import java.net.URI;
 class Handler implements URLHandler {
     int num = 0;
     String openingText="THE CHAT WILL SHOW HERE";
-    String chat="";
+    String chatString="";
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
@@ -17,7 +17,7 @@ class Handler implements URLHandler {
                 num+=1;
                 return String.format(openingText);
             }
-            return String.format(chat);
+            return String.format(chatString);
             
         } else if (url.getPath().contains("/add-message")) {
             String[] parameters= url.getQuery().split("=");
@@ -27,9 +27,9 @@ class Handler implements URLHandler {
                     posOfAnd=i;
                 }
             }
-           String u= parameters[2];
-           String c= parameters[1].substring(0,posOfAnd);
-           chat= chat+u+": "+c+"\n";
+           String currentUser= parameters[2];
+           String currentChat= parameters[1].substring(0,posOfAnd);
+           chatString= chatString+ currentUser+ ": "+ currentChat+ "\n";
            return String.format("Chat added!");
         } else {
             return "404 Not Found!";
