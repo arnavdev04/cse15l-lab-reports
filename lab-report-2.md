@@ -48,7 +48,11 @@ class ChatServer {
     }
 }
 ```
-    
+#### Example 1
+![Image](image1.jpeg) 
+
+#### Example 2
+![Image](image2.jpeg)
 <br/><br/> 
 ## Part 2
 <br/><br/> 
