@@ -7,14 +7,12 @@ import java.net.URI;
 
 
 class Handler implements URLHandler {
-    int num = 0;
     String openingText="THE CHAT WILL SHOW HERE";
     String chatString="";
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            if(num==0){
-                num+=1;
+            if(chatString.equals("")){
                 return String.format(openingText);
             }
             return String.format(chatString);
@@ -30,7 +28,7 @@ class Handler implements URLHandler {
            String currentUser= parameters[2];
            String currentChat= parameters[1].substring(0,posOfAnd);
            chatString= chatString+ currentUser+ ": "+ currentChat+ "\n";
-           return String.format("Chat added!");
+           return String.format(chatString);
         } else {
             return "404 Not Found!";
         }
