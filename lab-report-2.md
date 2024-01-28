@@ -48,13 +48,15 @@ class ChatServer {
     }
 }
 ```
-#### Example 1
+#### Example 1 of using `/add-message`
 ![Image](image1.jpeg) 
 
-#### Example 2
+#### Example 2 of using `/add-message`
 ![Image](image2.jpeg)
+
 <br/><br/> 
 ## Part 2
+
 <br/><br/> 
 ## Part 3
 <br/><br/> 
