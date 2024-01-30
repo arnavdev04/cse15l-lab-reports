@@ -7,17 +7,14 @@ import java.net.URI;
 
 
 class Handler implements URLHandler {
-    String openingText="THE CHAT WILL SHOW HERE";
+    String openingText="Welcome to ChatServer";
     String chatString="";
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            if(chatString.equals("")){
-                return String.format(openingText);
-            }
-            return String.format(chatString);
-            
-        } else if (url.getPath().contains("/add-message")) {
+            return String.format(openingText);
+            } 
+        else if (url.getPath().contains("/add-message")) {
             String[] parameters= url.getQuery().split("=");
             int posOfAnd=0;
             for(int i=0;i<parameters[1].length();i++){
@@ -25,11 +22,12 @@ class Handler implements URLHandler {
                     posOfAnd=i;
                 }
             }
-           String currentUser= parameters[2];
-           String currentChat= parameters[1].substring(0,posOfAnd);
-           chatString= chatString+ currentUser+ ": "+ currentChat+ "\n";
-           return String.format(chatString);
-        } else {
+            String currentUser= parameters[2];
+            String currentChat= parameters[1].substring(0,posOfAnd);
+            chatString= chatString+ currentUser+ ": "+ currentChat+ "\n";
+            return String.format(chatString);
+        } 
+        else {
             return "404 Not Found!";
         }
     }
@@ -48,21 +46,48 @@ class ChatServer {
     }
 }
 ```
-#### Example 1 of using `/add-message`
-![Image](image1.jpeg) 
+#### Variable description Table:
 
-#### Example 2 of using `/add-message`
+| **Name**         | **Type**     | **Description**                                                                                      |
+| :--------------- |:-------------|:--------------------------------------------------------------------------------------------------   |
+| `args`           | `String[]`   | To store the port number                                                                             |
+| `url`            | `URI`        | To refer to the the url of the webpage                                                               |
+| `openingText`    | `String`     | To store the message to be displayed when the path is just `/`                                       |
+| `chatString`     | `String`     | To store the whole chat sequence,i.e, usernames and chats and new line characters in a single string |
+| `parameters`     | `String[]`   | To store fragments of the current query by splitting the query with `=` character                    |
+| `posOfAnd`       | `int`        | To store the position of `&` character in the current query                                          |
+| `currentUser`    | `String`     | To extract and store the string for user from current query                                          |
+| `currentString`  | `String`     | To extract and store the string for user from current query with the help of `posOfAnd`              |
+
+
+#### Example 1 of using `/add-message`:
+![Image](image1.jpeg) 
+*  Firstly, when we enter the url, the `handleRequest(URI url)` method is called. The argument to this method is the url of the page-`http://localhost:2024/add-message?s=Got%20the%20music%20in%20you,%20baby%20tell%20me%20why?&user=astronotdev`. Since our url does contain `/add-message` portion, this else if condition becomes `true`.
+*  `String[] parameters={ "s" , "got the music in you, baby tell me why&user" , "astronotdev" }`
+*  `posOfAnd`= 38
+*  `currentUser`= "astronotdev"
+*  `currentString`= "got the music in you, baby tell me why"
+*  `chatString`= "astronotdev: got the music in you, baby tell me why\n"
+
+#### Example 2 of using `/add-message`:
 ![Image](image2.jpeg)
+*  Firstly, when we enter the url, the `handleRequest(URI url)` method is called. The argument to this method is the url of the page-`http://localhost:2024/add-message?s=you%27ve%20been%20locked%20in%20here%20forever%20and%20you%20just%20can%27t%20say%20goodbye&user=chashew
+`. Since our url does contain `/add-message` portion, this else if condition becomes `true`.
+*  `String[] parameters={ "s" , "you've been locked in here forever and you just can't say goodbye&user" , "chashew" }`
+*  `posOfAnd`= 64
+*  `currentUser`= "chashew"
+*  `currentString`= "you've been locked in here forever and you just can't say goodbye"
+*  `chatString`= "astronotdev: got the music in you, baby tell me why\nchashew: you've been locked in here forever and you just can't say goodbye\n"
 
 <br/><br/> 
 ## Part 2
-#### The absolute path to the _private key_ for my SSH key for logging into `ieng6`
+#### The absolute path to the _private key_ for my SSH key for logging into `ieng6`:
 ![Image](image3.png)
 
-#### The absolute path to the _public key_ for my SSH key for logging into `ieng6`
+#### The absolute path to the _public key_ for my SSH key for logging into `ieng6`:
 ![Image](image4.png)
 
-#### A terminal interaction where I log into my ieng6 account _without_ being asked for a password
+#### A terminal interaction where I log into my ieng6 account _without_ being asked for a password:
 ![Image](image5.png)
 
 
