@@ -68,4 +68,19 @@ class ChatServer {
 
 <br/><br/> 
 ## Part 3
+
+Over week 2 and 3 I learnt a lot of things that I did not know before. A few of them are:-
+* URL:
+    
+     URL stands for _Uniform Resource Locator_. URLs are used to navigate and locate information on the World Wide Web, allowing users to access websites, documents, images, videos, and other online resources. A URL consists of several components, including the protocol (such as HTTP or HTTPS), the domain name (or IP address), and the path to a specific resource (such as a web page or file) on a server.
+  
+* Remotely accessing your accounting using `ssh` command on terminal:
+
+   `ssh` stands for _Secure Socket Shell_ or _Secure Shell_ is a network protocol that gives users, particularly system administrators, a secure way to access a computer over an unsecured network. SSH is commonly used for remote access to command-line interfaces on servers, allowing users to log into and execute commands on a remote machine as if they were physically present at that machine.
+
+* Setting up _ssh keys_  for easy access to a server from a local device:
+
+    Setting up _ssh keys_ for secure and convenient access to a server involves generating a key pair on your local device and then configuring the server to recognize your public key. We generate the ssh keys using `ssh-keygen` command which generates two keys-_public_ and _private_. We then connect to the server using our credentials and store the _public key_ that we generated on it so that the server recognizes the key and therfore our local device when we try to log into the server the next time onwards.
+   
+
 <br/><br/> 
