@@ -50,10 +50,42 @@ public class ArrayExamples {
     ```
 * The symptom, as the output of running the tests:
     * For the 1st test-block:
-       ![Image](image2.jpeg)
+       ![Image](report-3-images/image2.png)
     * For the 2nd test-block:
-       ![Image](image2.jpeg)
-  
+       ![Image](report-3-images/image1.png)
+* The bug, as the before-and-after code change required to fix it
+    * Before
+    ```java
+       public class ArrayExamples {
+       ...
+         // Returns a *new* array with all the elements of the input array in reversed
+         // order
+         static int[] reversed(int[] arr) {
+           int[] newArray = new int[arr.length];
+           for(int i = 0; i < arr.length; i += 1) {
+           arr[i] = newArray[arr.length - i - 1]; //This line is the bug, arr and newArray should be swaped
+           }
+         return arr; //This line is all the bug, newArray should be returned
+         }
+       ...
+      }
+    ```
+    * After
+    ```java
+       public class ArrayExamples {
+       ...
+         // Returns a *new* array with all the elements of the input array in reversed
+         // order
+         static int[] reversed(int[] arr) {
+           int[] newArray = new int[arr.length];
+           for(int i = 0; i < arr.length; i += 1) {
+           newArray[i] = arr[arr.length - i - 1];
+           }
+         return newArray; //This line is all the bug, newArray should be returned
+         }
+       ...
+      }
+    ```
   
 <br/><br/>
 ## Part 2 - Researching Commands
