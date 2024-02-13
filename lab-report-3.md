@@ -81,7 +81,7 @@ public class ArrayExamples {
            for(int i = 0; i < arr.length; i += 1) {
            newArray[i] = arr[arr.length - i - 1];
            }
-         return newArray; //This line is all the bug, newArray should be returned
+         return newArray;
          }
        ...
       }
