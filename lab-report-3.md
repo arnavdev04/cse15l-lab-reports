@@ -86,6 +86,13 @@ public class ArrayExamples {
        ...
       }
     ```
+* Briefly describe why the fix addresses the issue.
+
+  Firstly, we read from the description that we have to create a new array and return the new array we also have to make sure that the original array is left unchanged. From the first bug, the issue I realized was that the original array was being changed. The newly created `newArray` has null characters in it and since the original array `arr` was on the left side of the `=` sign, arr's data was also changed to null. The second problem was that `arr` was being returned instead of the new array `newArray`. 
+
+   The issues addresses all these problems. Inside the `for loop`, `newArray` is constinuosly being updated with the reverse-ordeered data from `arr`. This fix also addresses the issue that the original array doesn't change and the reverses array is returned.
+  
+
   
 <br/><br/>
 ## Part 2 - Researching Commands
