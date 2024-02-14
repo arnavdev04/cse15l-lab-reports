@@ -94,6 +94,9 @@ public class ArrayExamples {
   
 <br/><br/>
 ## Part 2 - Researching Commands
+For this part of the lab report I will be writing about the `grep` command
 
+1. `-r` option:
+   
 
 <br/><br/>
