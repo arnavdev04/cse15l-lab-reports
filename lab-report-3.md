@@ -97,6 +97,7 @@ public class ArrayExamples {
 For this part of the lab report I will be writing about the `grep` command[^note].
 
 1. `-r` option:
+
 ```
 arnav@Arnavs-MacBook-Pro docsearch % grep -r "Darwin" ./technical
 ./technical/plos/journal.pbio.0020347.txt:        described by Charles Darwin (1859).
@@ -137,6 +138,7 @@ arnav@Arnavs-MacBook-Pro docsearch % grep -r "and therefore was" ./technical
 
 <br/><br/>
 <br/><br/>
+---
 ---
 [^note]: ACADEMIC INTEGRITY NOTE: I have not used ChatGPT for this section and only referred to information provided by `man grep`. For general syntax of the options, I referred to web searches with a general search along the following line- "How does '-...' option of grep command work? ".
 
