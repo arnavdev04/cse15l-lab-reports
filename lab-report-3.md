@@ -94,9 +94,31 @@ public class ArrayExamples {
   
 <br/><br/>
 ## Part 2 - Researching Commands
-For this part of the lab report I will be writing about the `grep` command
+For this part of the lab report I will be writing about the `grep` command[^note].
 
 1. `-r` option:
    
 
+
+   `-r` option recursively searches for the given word or pattern (phrase) in a directory and or a group of files and systematically lists them out. The `-r` option is very useful as it enables the user to search through a directory instead of searching through each file individually.
+
+2. `-r` option:
+   
+
+3. `-r` option:
+
+
+4. `-r` option:
+   
+
+
+
+
 <br/><br/>
+<br/><br/>
+
+[^note]: ACADEMIC INTEGRITY NOTE: I have not used ChatGPT for this section and only referred to information provided by `man grep`. For general syntax of the options, I referred to web searches with a general search along the following line- "How does '-...' option of grep command work? ".
+
+
+
+
