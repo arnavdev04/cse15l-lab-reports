@@ -92,8 +92,8 @@ public class ArrayExamples {
 
    The issues addresses all these problems. Inside the `for loop`, `newArray` is constinuosly being updated with the reverse-ordeered data from `arr`. This fix also addresses the issue that the original array doesn't change and the reverses array is returned.
   
-
-  
 <br/><br/>
 ## Part 2 - Researching Commands
+
+
 <br/><br/>
