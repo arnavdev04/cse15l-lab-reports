@@ -210,7 +210,6 @@ arnav@Arnavs-MacBook-Pro docsearch % grep  -l "Charles Darwin" ./technical/plos/
 
 <br/><br/>
 <br/><br/>
----
 [^note]: ACADEMIC INTEGRITY NOTE: I have not used ChatGPT for this section and only referred to information provided by `man grep`. For general syntax of the options, I referred to web searches with a general search along the following line- "How does '-...' option of grep command work? ".
 
 
