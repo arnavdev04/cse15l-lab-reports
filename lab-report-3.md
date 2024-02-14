@@ -161,7 +161,29 @@ arnav@Arnavs-MacBook-Pro docsearch % grep -e "Charles Darwin" -e  "genetic varia
 
 `-e` option allows the user to give multiple phrases to be searched simultaneously and displays the lines where at least one of the phrases given matches. `-e` option helps broaden the scope of our command when we might have to find all of the lines which contains at least one of the phrases
 
-3. `-r` option:
+3. `--max-count=num` option:
+
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -r --max-count=4 "and" ./technical/plos/journal.pbio.0020439.txt
+./technical/plos/journal.pbio.0020439.txt:        explosive synergy between biology and mathematics seems poised to enrich and extend both
+./technical/plos/journal.pbio.0020439.txt:        2003; Palmer et al. 2003; Hastings and Palmer 2003). Biology will increasingly stimulate
+./technical/plos/journal.pbio.0020439.txt:        biological units at that level and at lower and higher levels of organization (larger and
+./technical/plos/journal.pbio.0020439.txt:        smaller physical scales, faster and slower temporal scales). New mathematics will be
+```
+
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -r --max-count=1 "Darwin" ./technical                   
+./technical/plos/journal.pbio.0020347.txt:        described by Charles Darwin (1859).
+./technical/plos/journal.pbio.0020346.txt:        on the traditional comparative approach, which was always the strength of Darwinian
+./technical/plos/journal.pbio.0020046.txt:        answers to possible questions and criticisms to avoid stuttering. Charles Darwin also
+./technical/plos/journal.pbio.0020302.txt:        turn to be consumed by predators. Darwinian evolution would result in many of the same
+./technical/plos/journal.pbio.0020311.txt:        out by Charles Darwin and his son Francis in 1880. The Darwins were able to demonstrate
+./technical/plos/journal.pbio.0020071.txt:        are many ideologically motivated books opposing natural selection and Darwinism. To
+./technical/plos/journal.pbio.0020439.txt:        location within the head (Hsieh 2003). Charles Darwin was right when he wrote that people
+./technical/biomed/1471-2105-3-2.txt:        In the 1830's, Charles Darwin's investigation of the
+```
+`--max-count=num` option only search file until _num_ matches are found. `--max-count=num` option helps to not bombard the user with unnecessarily large results when we only need num number of matches.
+
 
 
 4. `-r` option:
@@ -172,7 +194,6 @@ arnav@Arnavs-MacBook-Pro docsearch % grep -e "Charles Darwin" -e  "genetic varia
 
 <br/><br/>
 <br/><br/>
----
 ---
 [^note]: ACADEMIC INTEGRITY NOTE: I have not used ChatGPT for this section and only referred to information provided by `man grep`. For general syntax of the options, I referred to web searches with a general search along the following line- "How does '-...' option of grep command work? ".
 
