@@ -97,8 +97,29 @@ public class ArrayExamples {
 For this part of the lab report I will be writing about the `grep` command[^note].
 
 1. `-r` option:
-   
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -r "Darwin" ./technical
+./technical/plos/journal.pbio.0020347.txt:        described by Charles Darwin (1859).
+./technical/plos/journal.pbio.0020347.txt:        Not all genetic variation is created equal. When Darwin first introduced the concept of
+./technical/plos/journal.pbio.0020347.txt:        evolution (Darwin 1859), he challenged the prevailing view that species were fixed entities
+./technical/plos/journal.pbio.0020346.txt:        on the traditional comparative approach, which was always the strength of Darwinian
+./technical/plos/journal.pbio.0020046.txt:        answers to possible questions and criticisms to avoid stuttering. Charles Darwin also
+./technical/plos/journal.pbio.0020046.txt:        stuttered; interestingly, his grandfather Erasmus Darwin suffered from the same condition,
+./technical/plos/journal.pbio.0020302.txt:        turn to be consumed by predators. Darwinian evolution would result in many of the same
+./technical/plos/journal.pbio.0020311.txt:        out by Charles Darwin and his son Francis in 1880. The Darwins were able to demonstrate
+./technical/plos/journal.pbio.0020071.txt:        are many ideologically motivated books opposing natural selection and Darwinism. To
+./technical/plos/journal.pbio.0020439.txt:        location within the head (Hsieh 2003). Charles Darwin was right when he wrote that people
+./technical/plos/journal.pbio.0020439.txt:        extra sense” (F. Darwin 1905). Today's biologists increasingly recognize that appropriate
+./technical/biomed/1471-2105-3-2.txt:        In the 1830's, Charles Darwin's investigation of the
+./technical/biomed/1471-2105-3-2.txt:        In the 1970's, Woese and Fox revisited Darwinian
+```
 
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -r "and therefore was" ./technical                
+./technical/government/Gen_Account_Office/June30-2000_gg00135r.txt:customers, and therefore was in the process of improving the
+./technical/biomed/1471-2407-1-19.txt:          NRP-154 (Figure 5, panels C and D), and therefore was
+./technical/biomed/1471-2180-2-29.txt:          from a HCV genome in that region, and therefore was used
+```
 
    `-r` option recursively searches for the given word or pattern (phrase) in a directory and or a group of files and systematically lists them out. The `-r` option is very useful as it enables the user to search through a directory instead of searching through each file individually.
 
@@ -116,7 +137,7 @@ For this part of the lab report I will be writing about the `grep` command[^note
 
 <br/><br/>
 <br/><br/>
-
+---
 [^note]: ACADEMIC INTEGRITY NOTE: I have not used ChatGPT for this section and only referred to information provided by `man grep`. For general syntax of the options, I referred to web searches with a general search along the following line- "How does '-...' option of grep command work? ".
 
 
