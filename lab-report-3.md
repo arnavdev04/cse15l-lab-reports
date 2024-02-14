@@ -124,8 +124,42 @@ arnav@Arnavs-MacBook-Pro docsearch % grep -r "and therefore was" ./technical
 
    `-r` option recursively searches for the given word or pattern (phrase) in a directory and or a group of files and systematically lists them out. The `-r` option is very useful as it enables the user to search through a directory instead of searching through each file individually.
 
-2. `-r` option:
-   
+2. `-e` option:
+
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -r  -e "Darwin" -e  "and therefore was" ./technical
+./technical/government/Gen_Account_Office/June30-2000_gg00135r.txt:customers, and therefore was in the process of improving the
+./technical/plos/journal.pbio.0020347.txt:        described by Charles Darwin (1859).
+./technical/plos/journal.pbio.0020347.txt:        Not all genetic variation is created equal. When Darwin first introduced the concept of
+./technical/plos/journal.pbio.0020347.txt:        evolution (Darwin 1859), he challenged the prevailing view that species were fixed entities
+./technical/plos/journal.pbio.0020346.txt:        on the traditional comparative approach, which was always the strength of Darwinian
+./technical/plos/journal.pbio.0020046.txt:        answers to possible questions and criticisms to avoid stuttering. Charles Darwin also
+./technical/plos/journal.pbio.0020046.txt:        stuttered; interestingly, his grandfather Erasmus Darwin suffered from the same condition,
+./technical/plos/journal.pbio.0020302.txt:        turn to be consumed by predators. Darwinian evolution would result in many of the same
+./technical/plos/journal.pbio.0020311.txt:        out by Charles Darwin and his son Francis in 1880. The Darwins were able to demonstrate
+./technical/plos/journal.pbio.0020071.txt:        are many ideologically motivated books opposing natural selection and Darwinism. To
+./technical/plos/journal.pbio.0020439.txt:        location within the head (Hsieh 2003). Charles Darwin was right when he wrote that people
+./technical/plos/journal.pbio.0020439.txt:        extra sense” (F. Darwin 1905). Today's biologists increasingly recognize that appropriate
+./technical/biomed/1471-2407-1-19.txt:          NRP-154 (Figure 5, panels C and D), and therefore was
+./technical/biomed/1471-2180-2-29.txt:          from a HCV genome in that region, and therefore was used
+./technical/biomed/1471-2105-3-2.txt:        In the 1830's, Charles Darwin's investigation of the
+./technical/biomed/1471-2105-3-2.txt:        In the 1970's, Woese and Fox revisited Darwinian
+```
+
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -e "Charles Darwin" -e  "genetic variation" ./technical/plos/journal.pbio.0020347.txt
+        described by Charles Darwin (1859).
+        varieties, these ancient sources of genetic variation continue to provide the basic
+        amount of time is to have access to a large and diverse pool of genetic variation.
+        Not all genetic variation is created equal. When Darwin first introduced the concept of
+        a good predictor of the extent of their genetic variation.
+        closely related to the wild ancestors and embody a great deal more genetic variation than
+        pool of genetic variation that will drive the future of plant improvement (Bessey 1906;
+        At some level, the idea of using natural genetic variation found in wild species and
+        exploration and utilization of natural genetic variation, expanding the genetic base of our
+```
+
+`-e` option allows the user to give multiple phrases to be searched simultaneously and displays the lines where at least one of the phrases given matches. `-e` option helps broaden the scope of our command when we might have to find all of the lines which contains at least one of the phrases
 
 3. `-r` option:
 
