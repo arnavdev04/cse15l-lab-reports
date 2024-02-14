@@ -186,10 +186,26 @@ arnav@Arnavs-MacBook-Pro docsearch % grep -r --max-count=1 "Darwin" ./technical
 
 
 
-4. `-r` option:
-   
+4. `-l` option:
 
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep -r  -l "Darwin" ./technical                  
+./technical/plos/journal.pbio.0020347.txt
+./technical/plos/journal.pbio.0020346.txt
+./technical/plos/journal.pbio.0020046.txt
+./technical/plos/journal.pbio.0020302.txt
+./technical/plos/journal.pbio.0020311.txt
+./technical/plos/journal.pbio.0020071.txt
+./technical/plos/journal.pbio.0020439.txt
+./technical/biomed/1471-2105-3-2.txt
+```
 
+```
+arnav@Arnavs-MacBook-Pro docsearch % grep  -l "Charles Darwin" ./technical/plos/journal.pbio.0020347.txt 
+./technical/plos/journal.pbio.0020347.txt
+```
+
+`-l` option results in only the names of files containing selected lines are written to standard output. `grep `will only search a file until a match has been found, making searches potentially less expensive. `-l` option allows the user to search for a phrase within massive files. It also saves processing time. If it lists a file name, then that file contains the given phrase
 
 
 <br/><br/>
