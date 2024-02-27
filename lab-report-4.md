@@ -112,7 +112,60 @@ Tests run: 2,  Failures: 1
 ```
 We can see that the file fails.
 
+## Editing the code:
+`vim` can be used to edit the code. `vim List` can be typed and `<tab>` pressed to autocomplete the file name. The extension can then be entered manually.
+```bash
+[ardev@ieng6-201]:lab7:86$ vim ListExamples.java
+```
+This opens the file in vim. Here, in normal mode, we can use `:set number` to enable line numbers. The same can be added to `~/.vimrc` to ensure that line numbers are enabled by default in the future.
+We can now see that there is an error on line 44. In normal mode, `44G` can then be typed to reach line 44. `e` can then be pressed to reach the end of the line. `r` can then be pressed to replace the character directly under the cursor in place. In this case, the number `1` is to be changed to `2`. `2` can then be entered to complete this operation. `:wq` can then be entered and `<enter>` pressed to quit out of vim.
 
+## Recompiling and running the tests:
+`<up>` can be pressed twice in order to reach the `javac` command. `<enter>` can then be pressed. The tests are now compiled. The same can be repeated once again in order to reach the java command. `<enter>` can then be pressed. The tests are now run without errors.
+```bash
+[ardev@ieng6-201]:lab7:90$ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+[ardev@ieng6-201]:lab7:90$ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+JUnit version 4.13.2
+..
+Time: 0.041
+
+OK (2 tests)
+```
+## Committing and Pushing:
+`git commit -a` can be used to commit changes from all the files that were modified. This then opens a vim window wherein the commit message can then be entered. In order to save time, the `-m` flag can be used to enter the commit message within the command line.
+
+```bash
+[ardev@ieng6-201]:lab7:91$ git commit -a -m "Fixed ListExamples.java"
+[main 4e211d6] Fixed ListExamples.java
+ Committer: Arnav Dev <ardev@ieng6-201.ucsd.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+We can then use git push to push the committed changes to the origin.
+```bash
+[ardev@ieng6-201]:lab7:92$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:arnavdev04/lab7.git
+   497ba1b..4e211d6  main -> main
+```
+The changes are now pushed to the fork of the repository on Github.
 
 
 
