@@ -5,3 +5,5 @@
 
 ## [Lab Report 3](https://arnavdev04.github.io/cse15l-lab-reports/lab-report-3.html)
 
+## [Lab Report 4](https://arnavdev04.github.io/cse15l-lab-reports/lab-report-4.html)
+
