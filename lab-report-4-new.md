@@ -291,8 +291,10 @@ To github.com:arnavdev04/lab7.git
    497ba1b..4e211d6  main -> main
 ```
 The changes are now pushed to the fork of the repository on Github.
+
 </br></br>
 </br></br>
+
 ### Summary
 __Keypresses:__
 1. `<enter>` key was used to run a command after entering it into the terminal.
