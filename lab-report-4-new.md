@@ -134,7 +134,7 @@ This opened the `ListExamples.java` file in the command line and allowed me to e
 ```
 This gave me all the line numbers of the code and my code now looked like this:
 ```bash
- 1 import java.util.ArrayList;
+  1 import java.util.ArrayList;
   2 import java.util.List;
   3 
   4 interface StringChecker { boolean checkString(String s); }
@@ -191,7 +191,7 @@ This made it much easier to understand the line numbers. Another command I used 
 The bug in the code was that `index2` was not getting incremented in the last `while` loop and it was incrementing `index1` instead which should not have happened. So I fixed the bug by changing `index1` to `index2`. I did that by moving the `<right>` arrow key 11 times till I reached the `1` character in the word `index1`. I then used the `x` key to delete the `1`. I used the `i` key to insert `2` in that position and then used `<escape>` to escape the `insert` mode. This was the code after editing:
 
 ```bash
- 1 import java.util.ArrayList;
+  1 import java.util.ArrayList;
   2 import java.util.List;
   3 
   4 interface StringChecker { boolean checkString(String s); }
@@ -292,7 +292,8 @@ To github.com:arnavdev04/lab7.git
 ```
 The changes are now pushed to the fork of the repository on Github.
 </br></br>
-## Summary
+</br></br>
+### Summary
 __Keypresses:__
 1. `<enter>` key was used to run a command after entering it into the terminal.
 2. `<up>` arrow key was used either to retrieve an old command from the command history in the terminal or it was used to navigate to a specific line in vim.
