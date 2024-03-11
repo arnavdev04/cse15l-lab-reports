@@ -295,7 +295,7 @@ The changes are now pushed to the fork of the repository on Github.
 <br/><br/>
 
 
-### Summary
+### Glossary
 __Keypresses:__
 1. `<enter>` key was used to run a command after entering it into the terminal.
 2. `<up>` arrow key was used either to retrieve an old command from the command history in the terminal or it was used to navigate to a specific line in vim.
