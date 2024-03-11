@@ -292,8 +292,8 @@ To github.com:arnavdev04/lab7.git
 ```
 The changes are now pushed to the fork of the repository on Github.
 
-</br></br>
-</br></br>
+<br/><br/>
+
 
 ### Summary
 __Keypresses:__
