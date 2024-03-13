@@ -4,19 +4,19 @@
 
 __Beto Ansome__: I am trying to run the following command
 
-```
+```bash
 coder@a50d74bf837e:~$ javac Server.java Handler.java ChatServer.java
 ```
 But I keep getting the following error message. I do not know what to do, please help me fix the issue
-```
+```bash
 error: file not found: Server.java
 Usage: javac <options> <source files>
 use --help for a list of possible options
 ```
-__NotGPT__: I think there may be a few things that you might be doing wrong. Firstly, do you think you are in the correct directory? You might wanna use the `cd` command that changes the current working directory and `ls` command that lists the contents of that directory to see that the file is present or not. Secondly, I might suggest making use of the `shell` file that is present, it makes stuff easier and is generally the more correct way to do what you might be trying to do.
+__Not GPT__: I think there may be a few things that you might be doing wrong. Firstly, do you think you are in the correct directory? You might wanna use the `cd` command that changes the current working directory and `ls` command that lists the contents of that directory to see that the file is present or not. Secondly, I might suggest making use of the `shell` file that is present, it makes stuff easier and is generally the more correct way to do what you might be trying to do.
 
 __Beto Ansome__: Oh yes! I forgot to use the `cd` command and I should have been in the `chat-server` directory and I think I found the `test.sh` file which you were referring to in there using `ls` command. Here is what I did:
-```
+```bash
 coder@a50d74bf837e:~$ cd chat-server/
 coder@a50d74bf837e:~/chat-server$ ls
 ChatHandler.class        HandlerTests.class       session.log
@@ -28,10 +28,10 @@ ChatServer.java          Server.java
 ```
 __Beto Ansome__: Now, how do I run this `test.sh` file ?
 
-__NotGPT__: You should use the `bash` command for that.
+__Not GPT__: You should use the `bash` command for that.
 
 __Beto Ansome__: I ran the command but it gave me another different error. I am stuck again :(
-```
+```bash
 coder@a50d74bf837e:~/chat-server$ bash test.sh
 JUnit version 4.13.2
 ..E.
@@ -48,10 +48,10 @@ org.junit.ComparisonFailure: expected:<[edwin: happy friday!
 FAILURES!!!
 Tests run: 3,  Failures: 1
 ```
-__NotGPT__: Don't worry, it just means that there is an error somewhere in your file. You should read this output carefully, it gives you hints as to where you might be able to find the mistake. Let me know if face further issues.
+__Not GPT__: Don't worry, it just means that there is an error somewhere in your file. You should read this output carefully, it gives you hints as to where you might be able to find the mistake. Let me know if face further issues.
 
 __Beto Ansome__: I am not being able to find the error in the `ChatServer` file. The code seems correct with me. Do you think you could help me please? This is the code in the `ChatServer.java` file:
-```
+```java
 import java.io.IOException;
 import java.net.URI;
 import java.io.BufferedWriter;
@@ -125,11 +125,11 @@ class ChatServer {
   }
 }
 ```
-__NotGPT__: This file seems correct. Have you checked the other file containing the test methods? You might wanna see your inputs in those methods.
+__Not GPT__: This file seems correct. Have you checked the other file containing the test methods? You might wanna see your inputs in those methods.
  
 __Beto Ansome__: Oh no I did not. I just checked the `HandlerTests.java` file and it appears I made a mistake in the `handleRequest2` test method. This is the code:
 
-```
+```java
 import static org.junit.Assert.*;
 import org.junit.*;
 import java.net.URI;
@@ -170,7 +170,7 @@ public class HandlerTests {
 
 __Beto Ansome__: I accidentally put the URL as `"http://localhost:4000/chat?name=edwin&message=happy%20friday!"` where I put `name=edwin` instead of `user=edwin`
 . The correct URL was supposed to be `"http://localhost:4000/chat?user=edwin&message=happy%20friday!"`. This is the corrected code:
-```
+```java
 import static org.junit.Assert.*;
 import org.junit.*;
 import java.net.URI;
@@ -210,7 +210,7 @@ public class HandlerTests {
 ```
 __Beto Ansome__: Now finally the tests ran successfully!!!! THANK YOU SO MUCH. This is the output:
 ```
-...
+...bash
 Time: 0.283
 
 OK (3 tests)
@@ -219,7 +219,7 @@ OK (3 tests)
 __Not GPT__: I am glad I could help you out. Now I need your help Beto. I am writing a lab report that showcases my effectiveness in helping students like you and in that lab report, I need to state the file structure so can you please send me that?
 
 __Beto Ansome__: Sure. Here it is:
-```
+```bash
 coder@a50d74bf837e:~$ ls -R
 .:
 chat-server       root-output.txt       test-success-output.txt
